@@ -19,10 +19,21 @@
     border: 1px solid white;
 }
 
+.vehicle_interrior {
+    width: 880px;
+    height: 495px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 0 0 300px;
+    display: none;
+}
+
 .img_discs {
     width: 113px;
     height: 114px;
-    animation: wheels 2s linear infinite;
+    animation: wheels 0.1s linear infinite;
 }
 
 .img_disc {
@@ -33,6 +44,55 @@
     justify-content: space-between;
     top: 194px;
     left: 182px;
+}
+
+.coloring {
+    width: 150px;
+    height: 80px;
+    
+    margin: -23px 0 0 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.color_salon {
+    width: 100px;
+    height: 20px;
+    
+}
+
+.color {
+    width: 150px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#black {
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#white {
+    width: 45px;
+    height: 45px;
+    background-color: #efefef;
+    border-radius: 50%;
+    border: 1px solid #efefef;
+}
+
+#yellow {
+    width: 45px;
+    height: 45px;
+    background-color: #e6ddd0;
+    border-radius: 50%;
+    border: 1px solid #e6ddd0;
 }
 
 @keyframes wheels {
@@ -400,14 +460,21 @@
     height:45px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
+}
+
+.car_type1 {
+    width: 100px;
+    height:45px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;  
+    margin: -67px 0 0 520px;
 }
 
 .car_type_text {
     width: 90px;
     height: 17px;
-    
     color: #707070;
     font-family: Gilroy;
     font-size: 12px;
