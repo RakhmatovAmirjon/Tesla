@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tesla_shell">
+        <div id="tesla_img" class="tesla_img">
+          <div class="img_disc">
+          <img class="img_discs" src="img/wheels_19.png" alt="">
+          <img class="img_discs" src="img/wheels_19.png" alt="">  
+          </div>
+
+        </div>
+        <div class="first">
+            <div class="power_reserve">
+                 <div class="power_reserve_text">Запас хода</div>
+                 <div id="kilometers" class="kilometers">750км</div>
+            </div>
+            <div class="price">
+                 <div class="price_text">Цена</div>
+                 <div id="price_describe" class="price_describe">$89990</div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="speed_info">
+                <div class="speed_shell">
+                  <div class="speed_of_car">Скорость автомобиля</div>
+                  <div class="speed_kilometers">60 км/ч</div>        
+                </div>
+                <div class="arrow_main1">            
+                    <button id="arrows1_1" class="arrows1_1"></button>
+                    <button id="arrows1_2" class="arrows1_2"></button>
+                </div>
+            </div>
+            
+            <div class="temperature">
+                <div class="window_shell">
+                <div class="temperature_window">Температура за окнами</div>
+                <div class="degrees_numbers">20°</div>   
+                </div>
+            <div class="arrow_main2">
+                 <div id="arrows2_1" class="arrows2_1"></div>
+                 <div id="arrows2_2" class="arrows2_2"></div>   
+            </div>
+            </div>
+            <div class="discs">
+            <div class="discs_shell">
+                <div class="disc_name">Диски</div>
+                <div class="discs_edition">19</div>
+            </div>
+            <div class="arrow_main3">
+                 <div class="arrows3_1"></div>
+                 <div class="arrows3_2"></div>   
+            </div>     
+            </div>
+
+            <div class="buttons">
+            <div class="conditioner">
+                <div class="conditioner_text">Кондиционер</div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle" onchange="changePrice1()"/>
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            <div class="edition">
+                <div class="edition_text">Версия Rang</div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle2" onchange="changePrice()"/>
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            <div id="car_type" class="car_type">
+                <div class="car_type_text">Вид автомобиля</div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle3"/>
+                    <span class="slider1 round"></span>
+                  </label>
+            </div>   
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+let arrows1_1 = document.getElementById('arrows1_1');
+let arrows1_2 = document.getElementById('arrows1_2');
+let kilometersElement = document.getElementById('kilometers');
+let speedKilometersElement = document.querySelector('.speed_kilometers');
+
+// Set initial values
+let kilometers = 750;
+let speedKilometers = 60;
+
+// Add event listeners to the arrows
+arrows1_1.onclick = () => {
+  if (speedKilometers < 80) {
+    kilometers -= 10;
+    speedKilometers += 5;
+  }
+  updateValues();
+}
+arrows1_2.onclick = () => {
+  if (speedKilometers > 20) {
+    kilometers += 10;
+    speedKilometers -= 5;
+  }
+
+  updateValues();
+}
+
+// Function to update the HTML elements with the new values
+function updateValues() {
+  kilometersElement.textContent = kilometers + 'км';
+  speedKilometersElement.textContent = speedKilometers + ' км/ч';
+}
+
+let arrows2_1 = document.getElementById('arrows2_1');
+let arrows2_2 = document.getElementById('arrows2_2');
+let DegreesNumbersElement = document.querySelector('.degrees_numbers');
+let conditioner_text = document.querySelector('.conditioner_text')
+let degrees_numbers = 20;
+
+
+arrows2_2.onclick = () => {
+  if (degrees_numbers > 1) {
+    degrees_numbers--;
+    updateValue1();
+  }
+
+  if (degrees_numbers <= 15) {
+    conditioner_text.innerHTML = "Печка"
+    updateValue1()
+  }
+};
+
+arrows2_1.onclick = () => {
+  if (degrees_numbers < 20) {
+    degrees_numbers++;
+    updateValue1();
+  }
+
+  if (degrees_numbers > 15) {
+    conditioner_text.innerHTML = "Кондиционнер"
+    updateValue1()
+  }
+};
+
+function updateValue1() {
+  DegreesNumbersElement.textContent = degrees_numbers + "°";
+}
+
+
+let priceDescribe = document.getElementById('price_describe');
+
+function changePrice() {
+  let toggle = document.getElementById('toggle2');
+  if (toggle.checked) {
+    priceDescribe.textContent = "$100000";
+  } else {
+    priceDescribe.textContent = "$89990";
+  }
+}
+
+function changePrice1() {
+  let toggle2 = document.getElementById('toggle');
+  if (toggle2.checked) {
+    priceDescribe.textContent = "$95000";
+  } else {
+    priceDescribe.textContent = "$89990";
+  }
+}
+
+let arrows3_1 = document.querySelector('.arrows3_1');
+let arrows3_2 = document.querySelector('.arrows3_2');
+let discsEditionElement = document.querySelector('.discs_edition');
+let imagination = document.querySelectorAll(".img_discs")  
+    arrows3_1.onclick = () => {
+      discsEditionElement.textContent = '21';
+      imagination.src = "img/wheels_21-removebg-preview.png"
+    };
+
+    arrows3_2.onclick = () => {
+      discsEditionElement.textContent = '19';
+      imagination.src = "img/wheels_19-removebg-preview.png"
+    };
+    </script>
+</body>
+</html>

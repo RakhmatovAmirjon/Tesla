@@ -1,0 +1,499 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tesla_shell {
+    width: 975px;
+    height: 670px;
+    margin: 0 auto;
+       
+}
+
+.tesla_img {
+    width: 975px;
+    height: 415px;
+    background-image: url("img/tesla.svg");
+    background-position: center;
+    border: 1px solid white;
+}
+
+.img_discs {
+    width: 113px;
+    height: 114px;
+    animation: wheels 2s linear infinite;
+}
+
+.img_disc {
+    width: 592px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 194px;
+    left: 182px;
+}
+
+@keyframes wheels {
+    0% {
+    transform: rotate(-0deg);
+    } 50% {
+    transform: rotate(-180deg);    
+    } 100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.first {
+    width: 447px;
+    height: 72px;
+    
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.power_reserve {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.power_reserve_text {
+    width: 83px;
+    height: 18px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.kilometers {
+    width: 125px;
+    height: 45px;
+    
+    color: #000;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    width: 210px;
+    height: 70px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price_text {
+    width: 44px;
+    height: 20px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price_describe {
+    width: 150px;
+    height: 45px;
+    
+    color: #000;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.second {
+    width: 930px;
+    height: 60px;
+    
+    margin: 0 auto;
+    display: flex;
+    gap: 45px;
+    align-items: end;
+}
+
+.second {
+    display: flex;
+}
+
+.speed_info {
+    width: 200px;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.speed_shell {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.speed_of_car {
+    width: 120px;
+    height: 15px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.speed_kilometers {
+    color: #000;
+    font-family: Gilroy;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 146px;
+    height: 35px;
+    
+}
+
+.arrow_main1 {
+    width: 19px;
+    height: 46px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arrows1_1 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background: url(img/arrow_top.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.arrows1_2 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background: url(img/arrow_bottom.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.temperature {
+    width: 180px;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+   align-items: flex-end; 
+}
+
+.window_shell {
+    width: 137px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.temperature_window {
+    width: 135px;
+    height: 15px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.degrees_numbers {
+    width: 60px;
+    height: 36px;
+    
+    color: #000;
+    font-family: Gilroy;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.arrow_main2 {
+    width: 19px;
+    height: 46px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows2_1 {
+    width: 20px;
+    height: 20px;
+    
+    background: url(img/arrow_top.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.arrows2_2 {
+    width: 20px;
+    height: 20px;
+    
+    background: url(img/arrow_bottom.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.discs {
+    width: 90px;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.discs_shell {
+    width: 60px;
+    height: 60px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.disc_name {
+    width: 50px;
+    height: 15px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12.5px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.discs_edition {
+    width: 55px;
+    height: 36px;
+    
+    color: #000;
+    font-family: Gilroy;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.arrow_main3 {
+    width: 18px;
+    height: 46px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows3_1 {
+    width: 20px;
+    height: 20px;
+    
+    background: url(img/arrow_top.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.arrows3_2 {
+    width: 20px;
+    height: 20px;
+    
+    background: url(img/arrow_bottom.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.buttons {
+    width: 330px;
+    height: 60px;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.conditioner {
+    width: 100px;
+    height:45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.conditioner_text {
+    width: 75px;
+    height: 15px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+  
+.edition {
+    width: 100px;
+    height:45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.edition_text {
+    width: 100px;
+    height: 17px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.car_type {
+    width: 100px;
+    height:45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.car_type_text {
+    width: 90px;
+    height: 17px;
+    
+    color: #707070;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 16px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    }
+
+    .slider1:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 16px;
+        left: 20px;
+        bottom: 2.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }    
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  .input:checked + .slider1 {
+    background-color: gray;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+
+  input:checked + .slider1:before {
+    transform: translateX(-16px);
+  }
+  
+  .round {
+    border-radius: 34px;
+  }
